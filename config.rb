@@ -51,7 +51,13 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+
+activate :deploy do |deploy|
+  deploy.method = :git
+end
+
 # Build-specific configuration
+
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
@@ -67,4 +73,10 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  activate :minify_css
+  activate :minify_javascript
+  activate :cache_buster
 end
+
+activate :directory_indexes
