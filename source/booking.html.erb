@@ -4,15 +4,19 @@ title: Бронирование номера | Гостиница Пьер, Ка
 <div class="container inner">
   <div class="row booking-form">
     <div class="span12 featurette">
-      <h2 class="featurette-heading">Забронируйте номер через сайт <span class="muted">или позвоните по тел. (000) 000-00-00, мы вам поможем</span></h2>
+      <h2 class="featurette-heading">
+        Забронируйте номер через сайт
+        <span class="muted">
+          или позвоните по тел. (000) 000-00-00, мы вам поможем
+        </span>
+      </h2>
 
       <form id="form9" name="form9" class="form-horizontal" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://flatsoft.wufoo.com/forms/kw8mj8506y1ou0/#public">
-
         <div class="control-group">
           <label class="control-label" for="inputEmail">Предполагаемая дата заезда *</label>
           <div class="controls">
             <div class="input-append date" id="date" data-date="" data-date-format="dd-mm-yyyy">
-              <input name="Field2" class="span2" size="16" type="text">
+              <input name="Field2" class="span2" size="16" type="text" required />
               <span class="add-on"><i class="icon-th"></i></span>
             </div>
           </div>
@@ -20,7 +24,7 @@ title: Бронирование номера | Гостиница Пьер, Ка
         <div class="control-group">
           <label class="control-label" for="inputEmail">Тип номера*</label>
           <div class="controls">
-            <select name="Field3" id="Field3" tabindex="2">
+            <select name="Field3" id="Field3" tabindex="2" required />
               <option value="Стандарт двухместный" selected="selected">Стандарт двухместный</option>
               <option value="Стандарт трехместный">Стандарт трехместный</option>
               <option value="Бизнес">Бизнес</option>
@@ -31,31 +35,31 @@ title: Бронирование номера | Гостиница Пьер, Ка
         <div class="control-group">
           <label class="control-label" for="inputEmail">Кол-во ночей*</label>
           <div class="controls">
-            <input name="Field4" type="text" id="nights" placeholder="Укажите цифру">
+            <input name="Field4" type="text" id="nights" placeholder="Укажите цифру" required />
           </div>
         </div>
         <div class="control-group">
           <label class="control-label" for="inputPassword">Кол-во гостей*</label>
           <div class="controls">
-            <input name="Field5" type="text" id="guests" placeholder="Укажите цифру">
+            <input name="Field5" type="text" id="guests" placeholder="Укажите цифру" required />
           </div>
         </div>
         <div class="control-group">
           <label class="control-label" for="inputPassword">Имя и фамилия*</label>
           <div class="controls">
-            <input name="Field6" type="text" id="name" class="input-xlarge">
+            <input name="Field6" type="text" id="name" class="input-xlarge" required />
           </div>
         </div>
         <div class="control-group">
           <label class="control-label" for="inputPassword">Эл. почта*</label>
           <div class="controls">
-            <input name="Field9" type="text" id="email" class="input-xlarge">
+            <input name="Field9" type="text" id="email" class="input-xlarge" required />
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="inputPassword">Телефон</label>
+          <label class="control-label" for="inputPassword">Телефон*</label>
           <div class="controls">
-            <input name="Field8" type="text" id="" class="input-xlarge">
+            <input name="Field8" type="text" id="" class="input-xlarge" required />
           </div>
         </div>
         <div class="control-group">
@@ -69,3 +73,17 @@ title: Бронирование номера | Гостиница Пьер, Ка
       </form>
     </div>
   </div>
+
+<script type="text/javascript">
+  $("#form9").validate({
+    messages: {
+      Field2: "Заполните дату заезда!",
+      Field3: "Выберите тип номера!",
+      Field4: "Укажите количество ночей!",
+      Field5: "Укажите количество гостей",
+      Field6: "Представьтесь, пожалуйста!",
+      Field8: "Укажите Ваш номер телефона!",
+      Field9: "Укажите Ваш адрес электронной почты!"
+    }
+  });
+</script>
