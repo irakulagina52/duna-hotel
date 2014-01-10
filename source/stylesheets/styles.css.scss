@@ -6,10 +6,29 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
   font-family: 'Open Sans', sans-serif;
+  background: url("/images/content_inner_bg.png");
+  background: url("/images/breadcrumbs.png");
 }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic);
 
+@mixin grey-marker {
+  background: rgba(#000, .5);
+  display: inline-block;
+  font-style: normal;
+  padding: 0 10px;
+  font-weight: 200;
+  margin: 1px 0;
+}
+
+h3 {
+  font-weight: 300;
+  margin: 0 0 25px;
+}
+
+ul {
+  margin: 0 0 25px 50px;
+}
 
 
 /* CUSTOMIZE THE NAVBAR
@@ -55,6 +74,14 @@ body {
   &:active, &:hover {background: #8C3041}
 }*/
 
+.navbar {
+  .navbar-inner {
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(#000, 0.95);
+  }
+}
+
 /* Downsize the brand/project name a bit */
 .navbar .brand {
   padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
@@ -80,7 +107,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 130px;
+  margin-bottom: 90px;
 }
 
 .carousel .container {
@@ -112,28 +139,55 @@ body {
 .carousel-caption {
   background-color: transparent;
   position: static;
-  max-width: 700px;
+  max-width: 800px;
   padding: 0 20px;
   margin-top: 185px;
 }
 .carousel-caption h1,
 .carousel-caption .lead {
   margin: 0;
-  line-height: 1.25;
+  line-height: 40px;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
-
 }
 
 .carousel-caption .lead {
-  font-size: 16px;
-  padding: 20px 0 30px
+  font-size: 14px;
+  padding: 20px 0;
+  line-height: 22px;
+}
+
+.carousel-caption h1 i {
+  background: rgba(#2c8bdc, .75);
+  display: inline-block;
+  font-style: normal;
+  padding: 0 5px;
+  font-weight: 400;
+  font-size: 28px;
+  margin: 3px 0;
+}
+
+.carousel-caption .lead i {
+  @include grey-marker;
 }
 
 .carousel-caption .btn {
   margin-top: 10px;
 }
 
+.btn.btn-primary {
+  background: #1a7bce;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  border: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 12px 28px 9px;
+  &:hover {
+    background: #2c8bdc;
+    box-shadow: 0 0 5px #2c8bdc;
+  }
+}
 
 
 /* MARKETING CONTENT
@@ -150,7 +204,6 @@ body {
 }
 
 .classes {
-  padding-bottom: 50px;
   .span4 p:first-of-type {
     min-height: 80px;
     margin-bottom: 20px;
@@ -171,11 +224,14 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 60px 0; /* Space out the Bootstrap <hr> more */
+  margin: 20px 0; /* Space out the Bootstrap <hr> more */
 }
 .featurette {
-  padding: 50px 0; /* Vertically center images part 1: add padding above and below text. */
+  padding: 30px 0 20px; /* Vertically center images part 1: add padding above and below text. */
   overflow: hidden; /* Vertically center images part 2: clear their floats. */
+  h2 {
+    margin: 0 0 30px;
+  }
 }
 /*.featurette-image {
   margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
@@ -195,7 +251,7 @@ body {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
-  color: #8C3041;
+  color: #2c8bdc;
 }
 
 .map-holder {
@@ -298,7 +354,7 @@ body {
 }
 
 .booking-form {
-  h2 {margin-bottom: 50px}
+
   .control-label {width:220px}
   .controls {margin-left:240px}
 }
@@ -339,15 +395,18 @@ body {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 30px;
+  line-height: 34px;
   font-weight: 600;
   margin-top: 11px;
   display: block;
   position: absolute;
   top: 0;
+  color: #333;
   &:hover {
     text-decoration: none;
     opacity: .85;
+    color: #333;
   }
 }
 
