@@ -16,7 +16,7 @@ title: Бронирование номера | Гостиница Дюна, Ка
           <label class="control-label" for="inputEmail">Предполагаемая дата заезда *</label>
           <div class="controls">
             <div class="input-append date" id="date" data-date="" data-date-format="dd-mm-yyyy">
-              <input name="Field2" class="span2" size="16" type="text" required />
+              <input id="datepicker" name="Field2" class="span2" size="16" type="text" required />
               <span class="add-on"><i class="icon-th"></i></span>
             </div>
           </div>
@@ -75,6 +75,10 @@ title: Бронирование номера | Гостиница Дюна, Ка
   </div>
 
 <script type="text/javascript">
+
+  $.datepicker.regional['ru'];
+  $("#datepicker" ).datepicker();
+
   $("#form9").validate({
     messages: {
       Field2: "Заполните дату заезда!",
