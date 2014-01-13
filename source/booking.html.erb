@@ -17,7 +17,6 @@ title: Бронирование номера | Гостиница Дюна, Ка
           <div class="controls">
             <div class="input-append date" id="date" data-date="" data-date-format="dd-mm-yyyy">
               <input id="datepicker" name="Field2" class="span2" size="16" type="text" required />
-              <span class="add-on"><i class="icon-calendar"></i></span>
             </div>
           </div>
         </div>
@@ -77,15 +76,18 @@ title: Бронирование номера | Гостиница Дюна, Ка
 <script type="text/javascript">
 
   var startDate = new Date();
-  var month = startDate.getMonth() + 1;
+  var month = startDate.getMonth()+1;
+
   if(startDate.getMonth() < 9) {
     month = "0" + month;
   }
 
-  var date = startDate.getDate() + 1 + "-" + month + "-" + startDate.getFullYear();
+  var date = startDate.getDate() + 1 + "." + month + "." + startDate.getFullYear();
 
-  $('#date').data({ date: date });
-  $('#date').datepicker().children('input').val(date);
+
+  $("#datepicker").val(date);
+
+  $('#datepicker').datepicker();
 
   $("#form9").validate({
     messages: {
