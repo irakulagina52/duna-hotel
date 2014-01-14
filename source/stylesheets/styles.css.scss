@@ -75,6 +75,9 @@ ul {
 }*/
 
 .navbar {
+  .nav {
+    margin: 0;
+  }
   .navbar-inner {
     border-radius: 0;
     box-shadow: none;
@@ -269,7 +272,18 @@ ul {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (max-width: 979px) {
+@media screen and (max-width: 1024px) {
+  .navbar {
+    .navbar-inner {
+      padding: 0 10px;
+    }
+    .nav > li > a {
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
 
   .container.navbar-wrapper {
     margin-bottom: 0;
@@ -302,7 +316,7 @@ ul {
 }
 
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
   .navbar-inner {
     margin: -20px;
