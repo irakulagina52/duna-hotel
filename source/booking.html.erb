@@ -24,10 +24,10 @@ title: Бронирование номера | Гостиница Дюна, Ка
           <label class="control-label" for="inputEmail">Тип номера <mark>*</mark></label>
           <div class="controls">
             <select name="Field3" id="Field3" tabindex="2" required />
-              <option value="Стандарт двухместный" selected="selected">Стандарт двухместный</option>
-              <option value="Стандарт трехместный">Стандарт трехместный</option>
-              <option value="Бизнес">Бизнес</option>
-              <option value="Люкс">Люкс</option>
+              <option data-room-type="def2" value="Стандарт двухместный">Стандарт двухместный</option>
+              <option data-room-type="def3" value="Стандарт трехместный">Стандарт трехместный</option>
+              <option data-room-type="biz" value="Бизнес">Бизнес</option>
+              <option data-room-type="lux" value="Люкс">Люкс</option>
             </select>
           </div>
         </div>
@@ -74,6 +74,13 @@ title: Бронирование номера | Гостиница Дюна, Ка
   </div>
 
 <script type="text/javascript">
+
+  if (location.search != '') {
+    room_type = location.search.slice(6, location.search.length);
+    $("[data-room-type='" + room_type + "']").attr("selected", "selected");
+  } else {
+    $("[data-room-type='def2']").attr("selected", "selected");
+  };
 
   var startDate = new Date();
   var month = startDate.getMonth()+1;
