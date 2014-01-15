@@ -43,10 +43,10 @@ ul {
   z-index: 10;
   margin-top: 20px;
   margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-}
-.navbar-wrapper {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 979px) {
     background: #000;
+    margin: 0;
+    padding-top: 20px;
     p { margin: 0; }
     a { text-align: center; }
     .navbar {
@@ -57,7 +57,6 @@ ul {
       .btn-navbar {
         margin: 10px;
         float: left;
-        margin-left: 30px;
         .icon-bar {
           width: 25px;
           height: 5px;
@@ -101,7 +100,7 @@ ul {
   .navbar-inner {
     border-radius: 0;
     box-shadow: none;
-    background: rgba(#000, 0.95);
+    background: rgba(#000, .95);
   }
 }
 
@@ -117,13 +116,6 @@ ul {
 .navbar .nav > li > a {
   padding: 15px 20px;
 }
-
-/* Offset the responsive button for proper vertical alignment */
-.navbar .btn-navbar {
-  margin-top: 10px;
-}
-
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -305,21 +297,23 @@ ul {
 
 @media screen and (max-width: 979px) {
 
-  .container.navbar-wrapper {
-    margin-bottom: 0;
-    width: auto;
-  }
-  .navbar-inner {
-    border-radius: 0;
-    margin: -20px 0;
-  }
+  .carousel {
+    display: none;
 
-  .carousel .item {
-    height: 500px;
-  }
-  .carousel img {
-    width: auto;
-    height: 500px;
+    .item {
+      height: 240px;
+    }
+    img {
+      width: auto;
+      height: auto;
+    }
+    .carousel-caption {
+      margin-top: 10px;
+      .lead,
+      h1 {
+        display: none;
+      }
+    }
   }
 
   .featurette {
@@ -337,10 +331,6 @@ ul {
 
 
 @media screen and (max-width: 767px) {
-
-  .navbar-inner {
-    margin: -20px;
-  }
 
   .carousel {
     margin-left: -20px;
@@ -385,7 +375,7 @@ ul {
 
 .container.inner {
   padding: 160px 0 0 0;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 979px) {
     padding-top: 0;
   }
 }
@@ -461,7 +451,7 @@ ul {
     opacity: .85;
     color: #333;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 979px) {
     top: 0;
     z-index: 1;
     left: 40px;
@@ -470,6 +460,7 @@ ul {
     font-size: 22px;
     margin: 0;
     color: #fff;
+    padding-top: 20px;
     &:hover {
       color: #fff;
     }
@@ -478,6 +469,9 @@ ul {
 
 .header {
   margin-bottom: 10px;
+  .btn {
+    display: none;
+  }
 }
 
 .index .logo,
@@ -487,7 +481,7 @@ ul {
 }
 
 .cont {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 979px) {
     float: none;
     text-align: center;
     padding: 10px;
@@ -548,12 +542,16 @@ footer {
   padding: 30px 0 0;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 979px) {
   body > .container {
-    margin-top: 140px;
+    margin-top: 200px;
   }
-  .marketing .span4 p {
+  .carousel {
+    display: none;
+  }
+  .navbar .navbar-inner {
     margin: 0;
+    background: #000;
   }
   .cta {
     padding-top: 10px;
@@ -561,8 +559,25 @@ footer {
       display: none;
     }
   }
-  .booking-form .controls {
-    margin-left: 0;
+  .header {
+    margin-bottom: 20px;
+    .btn {
+      display: block;
+      margin: 0 20px
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .marketing .span4 p {
+    margin: 0;
+  }
+  .booking-form {
+    .controls,
+    .control-label {
+      margin-left: 0;
+      width: 100%;
+    }
   }
   .partner {
     width: 100%;
@@ -570,5 +585,8 @@ footer {
   h3 {
     font-size: 21px;
     line-height: 1.2;
+  }
+  footer {
+    font-size: 10px;
   }
 }
