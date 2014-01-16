@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
-gem "middleman",            "~> 3.2.1"
+ruby '2.1.0'
+
+gem "middleman"
 gem "middleman-deploy"
-gem "middleman-livereload", "~> 3.1.0"
 
-gem "slim"
+gem 'middleman-google-analytics'
 
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+gem 'slim'
+
+gem 'rails-assets-normalize-css'
+gem 'modernizr-rails', require: false

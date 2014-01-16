@@ -1,17 +1,27 @@
 # Source code for dunahotel.ru
 
-## Prepare development environment
+###Prepare development environment###
 
 ```bash
-  git clone git@github.com:fs/duna-hotel.git
-  script/bootstrap
+  git clone git@github.com:fs/duna-hotel.git sitename
+  cd sitename
+  bin/bootstrap
 ```
 ## Development process
 
-1. Start server with `bundle exec middleman`
+1. Start server with `bin/middleman`
 2. Make changes in the `source` folder
 3. Checkout results in the browser on `http://localhost:4567`
 
-## Deploy
+## Manual deploy to GitHub pages
 
 Run `script/deploy`
+
+Make sure you have specified correct 'source/CNAME'
+
+### Test build
+
+```bash
+bin/bootstrap
+bin/build
+```
