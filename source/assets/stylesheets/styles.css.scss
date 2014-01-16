@@ -6,8 +6,8 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
   font-family: 'Open Sans', sans-serif;
-  background: url("/images/content_inner_bg.png");
-  background: url("/images/breadcrumbs.png");
+  background: image-url("content_inner_bg.png");
+  background: image-url("breadcrumbs.png");
 }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic);
