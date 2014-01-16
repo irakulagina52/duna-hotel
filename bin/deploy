@@ -3,5 +3,5 @@
 set -e
 
 git pull origin master
-middleman build
-middleman deploy
+bin/middleman build
+bin/middleman deploy
