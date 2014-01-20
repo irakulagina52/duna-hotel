@@ -442,8 +442,10 @@ ul {
 }
 
 .cont {
-  text-align: right;
-  font-size: 26px;
+  font-size: 14px;
+  p {
+    margin: 0;
+  }
   .addr, .fax {
     font-size: 14px;
   }
@@ -455,9 +457,7 @@ ul {
   font-weight: 600;
   margin-top: 11px;
   display: block;
-  position: absolute;
   line-height: 1;
-  top: 0;
   color: #333;
   &:hover {
     text-decoration: none;
@@ -482,9 +482,7 @@ ul {
 
 .header {
   margin-bottom: 10px;
-  .btn {
-    display: none;
-  }
+
 }
 
 .index .logo,
