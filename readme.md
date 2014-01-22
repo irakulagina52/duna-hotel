@@ -9,7 +9,7 @@
 ```
 ## Development process
 
-1. Start server with `bin/middleman`
+1. Start server with `bin/server`
 2. Make changes in the `source` folder
 3. Checkout results in the browser on `http://localhost:4567`
 
