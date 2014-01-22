@@ -48,14 +48,13 @@ ul {
     margin: 0;
     padding-top: 20px;
     p { margin: 0; }
-    a { text-align: center; }
     .navbar {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       .btn-navbar {
-        margin: 10px;
+        margin: 15px 10px 5px;
         float: left;
         .icon-bar {
           width: 25px;
@@ -158,7 +157,7 @@ ul {
   background-color: transparent;
   position: static;
   max-width: 800px;
-  padding: 0 40px;
+  padding: 0 20px;
   margin-top: 185px;
 }
 .carousel-caption h1,
@@ -265,12 +264,12 @@ ul {
 .featurette-image.pull-left {
   margin-right: 40px;
   margin-bottom: 100px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 .featurette-image.pull-right {
-  margin-left: 40px;
+  margin-left: 20px;
   margin-bottom: 100px;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 /* Thin out the marketing headings */
@@ -442,13 +441,19 @@ ul {
 }
 
 .cont {
-  font-size: 14px;
+  padding: 15px 0 0 20px;
+  display: block;
   p {
-    margin: 0;
+    margin: 0 0 3px;
+    font-size: 13px;
+    line-height: 18px;
   }
-  .addr, .fax {
-    font-size: 14px;
-  }
+}
+
+.addr {
+  font-size: 15px;
+  padding-top: 6px;
+  display: block;
 }
 
 .logo {
@@ -482,7 +487,34 @@ ul {
 
 .header {
   margin-bottom: 10px;
-
+  .btn {
+    font-size: 12px;
+    padding: 5px 30px;
+  }
+  @media screen and (max-width: 979px) {
+    position: relative;
+    z-index: 1;
+    .cont {
+      margin: 0;
+      padding: 0;
+    }
+    .logo { padding-top: 0; }
+    .addr { font-size: 13px; }
+    .btn {
+      line-height: 1.2;
+      padding: 5px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .cont { margin-bottom: 15px; }
+    .btn {
+      padding: 10px;
+    }
+    .addr {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .index .logo,
@@ -555,14 +587,21 @@ footer {
 
 @media screen and (max-width: 979px) {
   body > .container {
-    margin-top: 200px;
+    margin-top: 210px;
   }
   .carousel {
     display: none;
   }
-  .navbar .navbar-inner {
-    margin: 0;
-    background: #000;
+  .navbar {
+    .navbar-inner {
+      margin: 0;
+      background: #000;
+    }
+    .nav {
+      margin-top: 30px;
+      text-align: left;
+      border-top: 1px solid #222;
+    }
   }
   .cta {
     padding-top: 10px;
@@ -604,5 +643,50 @@ footer {
   }
   footer {
     font-size: 10px;
+  }
+}
+
+.watches,
+.weather {
+  position: relative;
+  height: 50px;
+  @media screen and (max-width: 979px) {
+    display: none;
+  }
+}
+.watches {
+  float: right;
+  height: 50px;
+  color: #333;
+  top: 6px;
+  strong {
+    display: block;
+    font-weight: normal;
+    font-size: 10px;
+    color: #A1A1A1;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .index & {
+    color: #fff;
+  }
+}
+
+.weather {
+  width: 177px;
+  float: right;
+  top: -10px;
+  .index & {
+    color: #fff;
+    #ww_2 .weather02_t {
+      color: #fff;
+    }
+  }
+  ul {
+    margin: 0 !important;
   }
 }
