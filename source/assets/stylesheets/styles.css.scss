@@ -441,12 +441,38 @@ ul {
 }
 
 .cont {
-  padding: 15px 0 0 20px;
+  padding: 5px 0 0 0;
   display: block;
+  background: image-url('wifi_free.png') 155px 13px no-repeat;
+  .index & { background-image: image-url('wifi_free_white.png'); }
   p {
     margin: 0 0 3px;
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 10px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #A1A1A1;
+    i {
+      font-style: normal;
+      width: 35px;
+      display: inline-block;
+    }
+    b {
+      font-weight: normal;
+      display: inline-block;
+      margin-left: 5px;
+      color: #000;
+      font-size: 15px;
+      text-transform: lowercase;
+      .index & {
+        color: #fff;
+      }
+    }
+  }
+  a {
+    color: #333;
+    text-decoration: underline;
+    &:hover { text-decoration: none; }
+    .index & { color: #fff; }
   }
 }
 
@@ -454,6 +480,10 @@ ul {
   font-size: 15px;
   padding-top: 6px;
   display: block;
+}
+.addr,
+.logo {
+  margin-right: 20px;
 }
 
 .logo {
@@ -496,7 +526,14 @@ ul {
     z-index: 1;
     .cont {
       margin: 0;
+      background: image-url('wifi_free_white.png') 90% 0 no-repeat;
       padding: 0;
+      b, i, a {
+        color: #fff;
+        width: auto;
+        font-size: 13px;
+        text-transform: none;
+      }
     }
     .logo { padding-top: 0; }
     .addr { font-size: 13px; }
