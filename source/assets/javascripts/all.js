@@ -1,6 +1,10 @@
+//= require jquery.fancybox
 //= require_tree .
 
 jQuery(function($){
+
+  $("a.fancybox").fancybox();
+
   $.datepicker.regional['ru'] = {
     closeText: 'Закрыть',
     prevText: '&#x3c;Пред',
