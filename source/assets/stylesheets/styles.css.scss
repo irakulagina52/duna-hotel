@@ -443,8 +443,15 @@ ul {
 .cont {
   padding: 5px 0 0 0;
   display: block;
+  float: left;
   background: image-url('wifi_free.png') 155px 13px no-repeat;
   .index & { background-image: image-url('wifi_free_white.png'); }
+
+  &+a {
+    float: left;
+    margin: 12px 0 0 20px;
+  }
+
   p {
     margin: 0 0 3px;
     font-size: 10px;
