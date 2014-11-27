@@ -4,109 +4,24 @@ title: Бронирование номера | Гостиница Дюна, Ка
 <div class="container inner">
   <div class="row booking-form">
     <div class="span12 featurette">
-      <h2 class="featurette-heading">
-        Забронируйте номер через сайт
-        <span class="muted">
-          или позвоните по тел. (843) 563-1515, мы вам поможем
-        </span>
-      </h2>
-
-      <form id="form9" name="form9" class="form-horizontal" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://flatsoft.wufoo.com/forms/kw8mj8506y1ou0/#public">
-        <div class="control-group">
-          <label class="control-label" for="inputEmail">Предполагаемая дата заезда <mark>*</mark></label>
-          <div class="controls">
-            <div class="input-append date" id="date" data-date="" data-date-format="dd-mm-yyyy">
-              <input id="datepicker" name="Field2" class="span2" size="16" type="text" required />
-            </div>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputEmail">Тип номера <mark>*</mark></label>
-          <div class="controls">
-            <select name="Field3" id="Field3" tabindex="2" required />
-              <option data-room-type="def1" value="Стандарт одноместный">Стандарт одноместный</option>
-              <option data-room-type="def2" value="Стандарт двухместный">Стандарт двухместный</option>
-              <option data-room-type="def3" value="Стандарт трехместный">Стандарт трехместный</option>
-              <option data-room-type="biz" value="Бизнес">Бизнес</option>
-              <option data-room-type="lux" value="Стандарт &plus;">Стандарт &plus;</option>
-            </select>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputEmail">Кол-во ночей <mark>*</mark></label>
-          <div class="controls">
-            <input name="Field4" type="text" id="nights" placeholder="Укажите цифру" required />
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputPassword">Кол-во гостей <mark>*</mark></label>
-          <div class="controls">
-            <input name="Field5" type="text" id="guests" placeholder="Укажите цифру" required />
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputPassword">Имя и фамилия <mark>*</mark></label>
-          <div class="controls">
-            <input name="Field6" type="text" id="name" class="input-xlarge" required />
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputPassword">Эл. почта <mark>*</mark></label>
-          <div class="controls">
-            <input name="Field9" type="text" id="email" class="input-xlarge" required />
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputPassword">Телефон <mark>*</mark></label>
-          <div class="controls">
-            <input name="Field8" type="text" id="" class="input-xlarge" required />
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <input id="saveForm" name="saveForm" value="Отправить заявку" class="btn btn-primary" type="submit" >
-          </div>
-          <li class="hide">
-          <input type="hidden" id="idstamp" name="idstamp" value="5ZVigaIdifEPBNDtuDj1Kr9xCQYoq9aHwDK7NZJ12Mc=" />
-          </li>
-        </div>
-      </form>
+      <script src="https://wubook.net/js/wbbook.jgz"></script>
+      <div id="_wbord_">
+        <a href="http://en.wubook.net/" style="display: block; margin-top: 5px; text-decoration:none;border:none">
+          <img src="https://wubook.net/imgs/default/booking_by_wu.gif" alt="Online Booking System" title="Hotel and tourism technologies" style="border:none;text-decoration:none"/>
+        </a>
+      </div>
+      <script>
+        var WuBook= new _WuBook(1411800917);
+        var wbparams= {
+              lang: 'ru',
+              layout: '',
+              width: $('div.container.inner').width(),
+              height: 'auto',
+              mobile: 1,
+              mheight: 640
+        };
+        WuBook.design_iframe("_wbord_", wbparams);
+      </script>
     </div>
   </div>
-
-<script type="text/javascript">
-
-  if (location.search != '') {
-    room_type = location.search.slice(6, location.search.length);
-    $("[data-room-type='" + room_type + "']").attr("selected", "selected");
-  } else {
-    $("[data-room-type='def2']").attr("selected", "selected");
-  };
-
-  var startDate = new Date();
-  var month = startDate.getMonth()+1;
-
-  if(startDate.getMonth() < 9) {
-    month = "0" + month;
-  }
-
-  var date = startDate.getDate() + 1 + "." + month + "." + startDate.getFullYear();
-
-
-  $("#datepicker").val(date);
-
-  $('#datepicker').datepicker();
-
-  $("#form9").validate({
-    messages: {
-      Field2: "Заполните дату заезда!",
-      Field3: "Выберите тип номера!",
-      Field4: "Укажите количество ночей!",
-      Field5: "Укажите количество гостей",
-      Field6: "Представьтесь, пожалуйста!",
-      Field8: "Укажите Ваш номер телефона!",
-      Field9: "Укажите Ваш адрес электронной почты!"
-    }
-  });
-
-</script>
+</div>
