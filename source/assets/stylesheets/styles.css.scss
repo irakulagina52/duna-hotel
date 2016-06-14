@@ -121,7 +121,7 @@ ul {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 90px;
+  margin-bottom: 40px;
   @media screen and (max-width: 640px) {
     display: none;
   }
@@ -143,7 +143,7 @@ ul {
 }
 
 .carousel .item {
-  height: 500px;
+  height: 400px;
 }
 .carousel img {
   position: absolute;
@@ -749,4 +749,34 @@ footer {
 
 .centered {
   text-align: center;
+}
+
+.button-nav {
+  height: 240px;
+}
+
+.btn-nav-home {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: black;
+
+  img {
+    height: 150px;
+  }
+
+  &:hover {
+    border: none;
+    background: none;
+  }
+
+  .main-nav-buttons {
+    display: block;
+  }
+}
+
+.online-tour {
+  height: 600px;
 }
