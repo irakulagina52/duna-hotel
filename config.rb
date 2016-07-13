@@ -16,6 +16,8 @@ configure :build do
 end
 
 activate :directory_indexes
+page "/en/*", :layout => "en_layout"
 
 # Silence I18n warning, http://stackoverflow.com/a/20381730
 I18n.config.enforce_available_locales = false
+activate :i18n

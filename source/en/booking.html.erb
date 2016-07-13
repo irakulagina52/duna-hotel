@@ -1,0 +1,34 @@
+---
+title: Booking | Duna Hotel, Kazan
+---
+<div class="container inner">
+  <div class="row booking-form">
+    <div class="span12 featurette">
+      <h1 class="featurette-heading colored">
+        5% Discount when paying by card!
+      </h1>
+      <h2 class="centered">
+        <a href="/en/payment_conditions">Payment terms</a>
+      </h2>
+      <script src="https://wubook.net/js/wbbook.jgz"></script>
+      <div id="_wbord_">
+        <a href="http://en.wubook.net/" style="display: block; margin-top: 5px; text-decoration:none;border:none">
+          <img src="https://wubook.net/imgs/default/booking_by_wu.gif" alt="Online Booking System" title="Hotel and tourism technologies" style="border:none;text-decoration:none"/>
+        </a>
+      </div>
+
+      <script>
+        var WuBook= new _WuBook(1411800917);
+        var wbparams= {
+              lang: 'en',
+              layout: '',
+              width: $('div.container.inner').width(),
+              height: 'auto',
+              mobile: 1,
+              mheight: 640
+        };
+        WuBook.design_iframe("_wbord_", wbparams);
+      </script>
+    </div>
+  </div>
+</div>
