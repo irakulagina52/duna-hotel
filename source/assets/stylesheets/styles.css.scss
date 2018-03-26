@@ -30,7 +30,6 @@ ul {
   margin: 0 0 25px 50px;
 }
 
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -47,7 +46,9 @@ ul {
     background: #000;
     margin: 0;
     padding-top: 20px;
-    p { margin: 0; }
+    p {
+      margin: 0;
+    }
     .navbar {
       position: absolute;
       top: 0;
@@ -69,9 +70,9 @@ ul {
 .navbar .navbar-inner {
   padding: 0;
   border: 0;
-  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-          box-shadow: 0 2px 10px rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
 }
 
 /*.index .navbar-inverse .navbar-inner {
@@ -108,7 +109,7 @@ ul {
   padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
   font-size: 16px;
   font-weight: bold;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 }
 
 /* Navbar links: increase padding for taller navbar */
@@ -136,7 +137,7 @@ ul {
   height: 80px;
   margin-top: 0;
   font-size: 120px;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
   background-color: transparent;
   border: 0;
   z-index: 10;
@@ -145,6 +146,7 @@ ul {
 .carousel .item {
   height: 400px;
 }
+
 .carousel img {
   position: absolute;
   top: 0;
@@ -160,12 +162,13 @@ ul {
   padding: 0 20px;
   margin-top: 185px;
 }
+
 .carousel-caption h1,
 .carousel-caption .lead {
   margin: 0;
   line-height: 40px;
   color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
 }
 
 .carousel-caption .lead {
@@ -205,7 +208,6 @@ ul {
     box-shadow: 0 0 5px #2c8bdc;
   }
 }
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -249,6 +251,7 @@ ul {
 .featurette-divider {
   margin: 20px 0; /* Space out the Bootstrap <hr> more */
 }
+
 .featurette {
   padding: 30px 0 20px; /* Vertically center images part 1: add padding above and below text. */
   overflow: hidden; /* Vertically center images part 2: clear their floats. */
@@ -256,6 +259,7 @@ ul {
     margin: 0 0 30px;
   }
 }
+
 /*.featurette-image {
   margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
 /*}*/
@@ -266,6 +270,7 @@ ul {
   margin-bottom: 100px;
   margin-left: 0;
 }
+
 .featurette-image.pull-right {
   margin-left: 20px;
   margin-bottom: 100px;
@@ -338,7 +343,6 @@ ul {
   }
 }
 
-
 @media screen and (max-width: 767px) {
 
   .carousel {
@@ -381,7 +385,6 @@ ul {
 
 }
 
-
 .container.inner {
   padding: 160px 0 0 0;
   @media screen and (max-width: 979px) {
@@ -394,9 +397,11 @@ ul {
     background: transparent;
     color: red;
   }
-  .control-label {width:220px}
+  .control-label {
+    width: 220px
+  }
   .controls {
-    margin-left:240px;
+    margin-left: 240px;
     input[type="text"] {
       box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -419,7 +424,7 @@ ul {
     padding-top: 40px;
   }
   ul {
-    list-style:none;
+    list-style: none;
     margin: 0;
   }
 }
@@ -444,7 +449,12 @@ ul {
   padding: 5px 0 0 0;
   display: block;
   background: image-url('wifi_free.png') 155px 13px no-repeat;
-  .index & { background-image: image-url('wifi_free_white.png'); }
+  .index & {
+    background-image: image-url('wifi_free_white.png');
+  }
+  .en_index & {
+    background-image: image-url('wifi_free_white.png');
+  }
 
   p {
     margin: 0 0 3px;
@@ -472,8 +482,12 @@ ul {
   a {
     color: #333;
     text-decoration: underline;
-    &:hover { text-decoration: none; }
-    .index & { color: #fff; }
+    &:hover {
+      text-decoration: none;
+    }
+    .index & {
+      color: #fff;
+    }
   }
 }
 
@@ -482,6 +496,7 @@ ul {
   padding-top: 6px;
   display: block;
 }
+
 .addr,
 .logo {
   margin-right: 20px;
@@ -514,6 +529,14 @@ ul {
       color: #fff;
     }
   }
+
+  .logo-stars {
+    width: 46px;
+    .index &, .en_index & {
+      -ms-filter: invert(100%);
+      filter: invert(100%)
+    }
+  }
 }
 
 .header {
@@ -535,15 +558,21 @@ ul {
         text-transform: none;
       }
     }
-    .logo { padding-top: 0; }
-    .addr { font-size: 13px; }
+    .logo {
+      padding-top: 0;
+    }
+    .addr {
+      font-size: 13px;
+    }
     .btn {
       line-height: 1.2;
       padding: 5px;
     }
   }
   @media screen and (max-width: 767px) {
-    .cont { margin-bottom: 15px; }
+    .cont {
+      margin-bottom: 15px;
+    }
     .btn {
       padding: 10px;
     }
@@ -554,8 +583,22 @@ ul {
   }
 }
 
+a.header-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a.header-link, a.header-link:hover, a.header-link:active, a.header-link:focus {
+  color: #5a5a5a;
+
+  .index &, .en_index & {
+    color: #ffffff;
+  }
+
+}
+
 .index .logo,
-.index .cont {
+.index .cont, .en_index .logo, .en_index .cont {
   color: #fff;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
@@ -573,8 +616,16 @@ ul {
   }
 }
 
+.en_index .cont p b {
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}
+
 .alert {
-  text-align:center;
+  text-align: center;
   display: none;
 }
 
@@ -592,7 +643,7 @@ ul {
 }
 
 .cta {
-  padding: 40px  0 60px;
+  padding: 40px 0 60px;
   text-align: center;
 }
 
@@ -611,7 +662,11 @@ ul {
   margin-right: 3%
 }
 
-.partner ul {list-style:none; padding: 0; margin: 0}
+.partner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
 
 table a {
   text-decoration: underline;
@@ -702,6 +757,7 @@ footer {
     display: none;
   }
 }
+
 .watches {
   float: left;
   color: #333;
@@ -779,4 +835,42 @@ footer {
 
 .online-tour {
   height: 600px;
+}
+
+.documents {
+  list-style: none;
+
+  .download-doc-link {
+    margin: 8px 0;
+
+    a {
+      font-size: 18px;
+      font-weight: bold;
+      color: #5a5a5a;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      opacity: .8;
+    }
+  }
+}
+
+p.payment {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+ul.tarif-descr {
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+  font-size: 18px;
+  color: #999999;
+  font-weight: 300;
+  margin-top: -15px;
+}
+
+ul.tarif-descr li {
+  margin: 7px 0;
 }
