@@ -19,27 +19,22 @@ title: Reservation | Duna Hotel, Kazan
       <div id="_bn_widget_">
          <a href="http://bnovo.ru/" target="_blank">Bnovo</a>
       </div>
-      <script src="http://widget.bnovo.ru/js/bnovo.js"></script>
-      <script type="text/javascript">
-        Bnovo_Widget.init(function(){
-          Bnovo_Widget.open('_bn_widget_', {
-              type: "vertical",
-              lcode: "1411800917",
-              lang: "en",
-              width: "230",
-              background: "#ADADAD",
-              bg_alpha: "100",
-              padding: "18",
-              btn_background: "#2C8BDC",
-              btn_background_over: "#1A77C6",
-              btn_textcolor: "#FFFFFF",
-              visa: "on",
-              dop_background: "#2C8BDC",
-              dop_textcolor: "#FFFFFF",
-              dop_height: "42",
-              url: "http://hotelduna.ru/en/booking"
-          });
-        });
+      <script src="https://widget.bnovo.ru/js/iframe.js"></script>
+      <div id="bnovo_module_app"></div>
+      <script>
+        var params= {
+              lcode: 1411800917,
+              lang: 'en',
+              layout: '',
+              width: '100%',
+              height: 'auto',
+              mobile: 1,
+              mheight: 640,
+              ga_new: '',
+              ga_old: ''
+          };
+      bnovoModuleCreator(params);
+      bnovoGetModule();
       </script>
     </div>
   </div>
