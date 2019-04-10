@@ -15,7 +15,7 @@
 
 ## Manual deploy to GitHub pages
 
-Run `script/deploy`
+Run `bin/deploy`
 
 Make sure you have specified correct 'source/CNAME'
 
